@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 21:49:30 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/09 19:54:50 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/10 21:31:46 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int	bad_case(char *x, int sign, int y, int zeros)
 	return (1);
 }
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
 	int			i;
 	int			y;
@@ -63,22 +63,22 @@ int	ft_atoi(const char *nptr)
 
 	sign = 1;
 	i = 0;
-	while (is_space(nptr[i]))
+	while (is_space(str[i]))
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-		if (nptr[i++] == '-')
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
 			sign = -1;
 	val = 0;
 	y = 0;
 	zeros = 0;
-	while (nptr[i + y] != 0 && (nptr[i + y] >= '0' && nptr[i + y] <= '9'))
+	while (str[i + y] != 0 && (str[i + y] >= '0' && str[i + y] <= '9'))
 	{
-		val = (val * 10) + (nptr[i + y++] - '0');
+		val = (val * 10) + (str[i + y++] - '0');
 		if (val == 0)
 			zeros++;
 	}
-	if (y - zeros >= 19 && bad_case((char *)nptr + i, sign, y, zeros) != 1)
-		return (bad_case((char *)nptr + i, sign, y, zeros));
+	if (y - zeros >= 19 && bad_case((char *)str + i, sign, y, zeros) != 1)
+		return (bad_case((char *)str + i, sign, y, zeros));
 	return (val * sign);
 }
 

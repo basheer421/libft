@@ -6,25 +6,25 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 22:17:58 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/05 18:51:39 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/10 21:32:38 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*ptr;
 	size_t			i;
 
-	if (size > size * nmemb)
+	if (size > size * count)
 		return (NULL);
-	ptr = malloc(size * nmemb);
+	ptr = malloc(size * count);
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < nmemb * size)
+	while (i < count * size)
 		ptr[i++] = '\0';
 	return ((void *)ptr);
 }
