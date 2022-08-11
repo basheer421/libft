@@ -19,7 +19,7 @@ $(NAME): # 		Make .o files and make .a file
 	$(CC) $(CFLAGS) -c $(FILES) && ar rcs $(NAME) $(OBJS)
 
 clean: #		Removes all .o files
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean:	clean # Removes the .a file
 	rm -f $(NAME)

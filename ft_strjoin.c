@@ -6,15 +6,13 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:35:06 by bammar            #+#    #+#             */
-/*   Updated: 2022/07/30 09:35:07 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/11 17:54:45 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char		*ft_strjoin(char const *s1, char const *s2);
-static int	slen(const char *str);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -25,8 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	s1_len = slen(s1);
-	s2_len = slen(s2);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
 	s = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
@@ -45,15 +43,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (s);
 }
 
-static int	slen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 /* TEST
 int	main(void)
 {

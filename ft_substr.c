@@ -6,24 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 22:39:47 by bammar            #+#    #+#             */
-/*   Updated: 2022/07/31 11:35:42 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/11 17:57:35 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-static size_t	slen(char *str)
-{
-	size_t	i;
-
-	if (str == NULL)
-		return (0);
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 static char	*empty_string(void)
 {
@@ -43,9 +30,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	strlen;
 	size_t	char_count;
 
-	if (!s || (size_t)start >= slen((char *)s) || slen((char *)s) == 0)
+	if (!s || (size_t)start >= ft_strlen((char *)s)
+		|| ft_strlen((char *)s) == 0)
 		return (empty_string());
-	strlen = slen((char *)s);
+	strlen = ft_strlen((char *)s);
 	char_count = 0;
 	if (len + start < strlen)
 		char_count = (len);

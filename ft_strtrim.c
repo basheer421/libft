@@ -6,22 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:35:40 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/09 19:25:18 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/11 17:59:33 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-static int	slen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 static int	haschr(char c, char *s)
 {
@@ -53,7 +42,7 @@ int	get_sum_of_trimmed(const char *s1, const char *set)
 	int		sum_of_trimmed;
 
 	s = (char *)s1;
-	s1_len = slen(s);
+	s1_len = ft_strlen(s);
 	sum_of_trimmed = 0;
 	i = 0;
 	while (s[i] != 0 && (haschr(s[i], (char *)set)))
@@ -73,14 +62,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*s;
 
-	i = slen((char *)s1) - 1;
+	if (!s1 || !set)
+		return (NULL);
+	i = ft_strlen((char *)s1) - 1;
 	end = i;
 	while (i >= 0 && (haschr(s1[i--], (char *)set)))
 		end--;
-	if (get_sum_of_trimmed(s1, (char *)set) >= slen((char *)s1))
+	if (get_sum_of_trimmed(s1, (char *)set) >= (int)ft_strlen((char *)s1))
 		return (empty_string());
-	s = (char *)malloc(slen((char *)s1) - get_sum_of_trimmed(s1, (char *)set)
-			+ 1);
+	s = (char *)malloc(ft_strlen((char *)s1) - get_sum_of_trimmed(s1,
+				(char *)set) + 1);
 	if (!s)
 		return (NULL);
 	i = 0;

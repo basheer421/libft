@@ -6,12 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:36:01 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/08 21:26:45 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/11 17:55:44 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static char	*empty_string(void)
 {
@@ -24,24 +23,14 @@ static char	*empty_string(void)
 	return (s);
 }
 
-static int	slen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != 0)
-		i++;
-	return (i);
-}
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*ss;
 
-	if (!s || !f || slen(s) == 0)
+	if (!s || !f || ft_strlen(s) == 0)
 		return (empty_string());
-	ss = (char *)malloc((slen(s) + 1) * sizeof(char));
+	ss = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!ss)
 		return (NULL);
 	i = 0;

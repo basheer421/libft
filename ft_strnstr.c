@@ -6,28 +6,18 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:35:45 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/05 18:33:16 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/11 17:56:03 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-static int	slen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (slen((char *)needle) == 0)
+	if (ft_strlen((char *)needle) == 0)
 		return ((char *)haystack);
 	i = 0;
 	while (i < len && haystack[i] != 0)
