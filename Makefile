@@ -15,8 +15,8 @@ BONUS_OBJS = $(BONUS_FILES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): # 		Make .o files and make .a file
-	$(CC) $(CFLAGS) -c $(FILES) && ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS) 
 
 clean: #		Removes all .o files
 	rm -f $(OBJS) $(BONUS_OBJS)
@@ -26,5 +26,5 @@ fclean:	clean # Removes the .a file
 
 re:	fclean all #			Removes .a file and redo
 
-bonus:
-	$(CC) $(CFLAGS) -c $(FILES) $(BONUS_FILES) && ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(BONUS_OBJS)
+	ar rc $(NAME) $(BONUS_OBJS)
