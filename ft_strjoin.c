@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:35:06 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/11 17:54:45 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:30:44 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,21 +42,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s[i] = 0;
 	return (s);
 }
-
-/* TEST
-int	main(void)
-{
-	char	x[];
-	char	y[];
-	char	*z;
-
-    x[] = "hello";
-    y[] = " man";
-    z = ft_strjoin(x, y);
-    printf("ft_method: %s\n",
-        z);
-    if (y[4] == 0)
-        printf("ok\n");
-    return (0);
-}
-*/

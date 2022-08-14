@@ -6,11 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 16:35:30 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/05 18:24:39 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 17:21:42 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -36,17 +36,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return ((void *)d);
 }
-/* TEST
-#include <string.h>
-int	main(void)
-{
-    int n = 2;
-	char src[] = {67, 68, 67, 68, 69, 0, 45};
-	// char dest[] = {67, 67, 68, 68, 69, 0, 45};
-	char s2[] = {67, 68, 67, 68, 69, 0, 45};
-	// char d2[] = {67, 67, 68, 68, 69, 0, 45};
-	printf("%s", ft_memmove(src + 1, src, n));
-	printf("\n\n%s", memmove(s2 + 1, s2, n));
-	return (0);
-}
-*/

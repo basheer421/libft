@@ -6,11 +6,10 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:31:17 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/10 18:09:10 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:26:34 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

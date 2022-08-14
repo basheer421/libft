@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:35:26 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/05 17:22:15 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:32:08 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ int	ft_toupper(int c)
 		return (c + ('A' - 'a'));
 	return (c);
 }
-/* TEST
-int	main(void)
-{
-	char	x;
-
-    x = '$';
-    printf("%c\n", toupper(x));
-    return (0);
-}
-*/

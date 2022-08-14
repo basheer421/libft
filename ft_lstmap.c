@@ -6,12 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 19:22:10 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/10 21:16:16 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:26:30 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*bad_case(t_list *lst, void (*del)(void *))
 {

@@ -6,11 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 19:56:47 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/05 18:26:01 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:31:46 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -30,16 +30,3 @@ char	*ft_strrchr(const char *s, int c)
 			ptr = (char *)s + i - 1;
 	return (ptr);
 }
-/* TEST
-#include <string.h>
-int	main(void)
-{
-	char	x[];
-
-    x[] = "ltripouiel";
-    printf("ft_method: %p, original method: %p\n",
-        ft_strrchr(x, 0),
-		strrchr(x, 0));
-    return (0);
-}
-*/

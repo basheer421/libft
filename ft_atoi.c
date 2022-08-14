@@ -6,11 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 21:49:30 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/10 21:31:46 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 17:14:38 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 static int	is_space(int c)
 {
@@ -27,12 +27,12 @@ static int	super_bad_case(int sign)
 	return (1);
 }
 
-static int	bad_case(char *x, int sign, int y, int zeros)
+static int	bad_case(char *x, int sign, int y, int zrs)
 {
 	int		i;
 	char	*max;
 
-	if (y - zeros > 19)
+	if (y - zrs > 19)
 		return (super_bad_case(sign));
 	max = "9223372036854775808";
 	if (sign == 1)
@@ -59,7 +59,7 @@ int	ft_atoi(const char *str)
 	int			y;
 	long long	val;
 	int			sign;
-	int			zeros;
+	int			zrs;
 
 	sign = 1;
 	i = 0;
@@ -70,28 +70,13 @@ int	ft_atoi(const char *str)
 			sign = -1;
 	val = 0;
 	y = 0;
-	zeros = 0;
+	zrs = 0;
 	while (str[i + y] != 0 && (str[i + y] >= '0' && str[i + y] <= '9'))
 	{
 		val = (val * 10) + (str[i + y++] - '0');
-		if (val == 0)
-			zeros++;
+		zrs += (val == 0);
 	}
-	if (y - zeros >= 19 && bad_case((char *)str + i, sign, y, zeros) != 1)
-		return (bad_case((char *)str + i, sign, y, zeros));
+	if (y - zrs >= 19 && bad_case((char *)str + i + zrs, sign, y, zrs) != 1)
+		return (bad_case((char *)str + i + zrs, sign, y, zrs));
 	return (val * sign);
 }
-
-/* TEST
-// #include <stdlib.h>
-// int	main(void)
-// {
-
-// 	printf("ft_method: %llu,\noriginal: %llu \n",
-					(unsigned long long)ft_atoi("	\t-000009223372036854775811"),
-						(unsigned long long)atoi("	\t-000009223372036854775811"));
-// 	// if (ft_atoi("") == atoi(""))
-// 	// 	puts("ok");
-// 	return (0);
-// }
-*/

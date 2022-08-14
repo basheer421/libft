@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:35:45 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/11 17:56:03 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:31:37 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/* TEST
-#include <string.h>
-int	main(void)
-{
-    char x[] = "my name is basheer";
-    char y[] = "basheer";
-    printf("ft_method: %s, original method: \n",
-        ft_strnstr(x, y, sizeof(char) * strlen(x)));
-        //strnstr(x, y, (sizeof(char) * strlen(x))));
-    return (0);
-}
-*/

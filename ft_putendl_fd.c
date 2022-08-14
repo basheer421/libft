@@ -6,11 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:38:00 by bammar            #+#    #+#             */
-/*   Updated: 2022/07/30 09:38:01 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:29:30 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -24,23 +24,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-/* TEST
-#include <fcntl.h>
-#include <stdio.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-
-int	main(void)
-{
-	int	file;
-	int	cl;
-
-    file = open("test.txt", O_WRONLY | O_CREAT, S_IRWXU | S_IRWXO | S_IRWXG);
-    printf("%d\n", file);
-    ft_putendl_fd("lol it works with a new line without my typing it...", file);
-    cl = close(file);
-    printf("%d\n", cl); // 0 for succes
-    return (0);
-}
-*/

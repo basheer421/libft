@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 16:51:36 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/11 17:25:31 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:30:54 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
-
-// #include <string.h>
-// #include <stdlib.h>
-
-// int main() {
-// 	char *dest;
-
-// 	if (!(dest = (char *)malloc(sizeof(*dest) * 15)))
-// 		return (0);
-// 	memset(dest, 'r', 15);
-// 	size_t x = (ft_strlcat(dest, "lorem ipsum dolor sit amet", 5));
-//     printf("New target: \"%s\"\n", dest);
-// 	printf("x   %zu\n", x);
-
-//     return (0);
-// }

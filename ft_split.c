@@ -6,12 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 17:29:57 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/11 18:15:23 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:30:15 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char		**ft_split(char const *s, char c);
 static char	*chrskip(char *s, char c);
@@ -100,20 +99,3 @@ static int	get_word_count(const char *s, char c)
 	}
 	return (word_count);
 }
-
-/* TEST
-int	main(void)
-{
-	char	**z;
-	// int		a;
-
-    // char x[] = "    tripouille   42 sd s my";
-    z = ft_split(" / hello /my /name   /is    /Basheer    ", ' ');
-	for (int i = 0; i < 5; i++)
-		puts(z[i]);
-    for (int i = 0; i < 5; i++)
-        free(z[i]);
-    free(z);
-    return (0);
-}
-*/

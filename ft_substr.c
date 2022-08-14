@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 22:39:47 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/11 17:57:35 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:31:58 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s2[i] = '\0';
 	return (s2);
 }
-/* TEST
-int	main(void)
-{
-	char	*s;
-
-    s = ft_substr("tripouille", 5, 2);
-    printf("ft_method: %s\n", s);
-	free(s);
-    return (0);
-}
-*/

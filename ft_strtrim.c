@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:35:40 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/11 17:59:33 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:31:53 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s[y] = 0;
 	return (s);
 }
-
-// // /* TEST
-// int	main(void)
-// {
-// 	char	*z;
-
-//     z = ft_strtrim(" xxxtripouille     llkl  xxx ", " x");
-// 	printf("ft_method:*%s*\n", z);
-// 	return (0);
-// }
-// // */

@@ -6,12 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 22:17:32 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/05 18:30:20 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:30:31 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -33,13 +32,3 @@ char	*ft_strdup(const char *s)
 	s2[i] = 0;
 	return (s2);
 }
-/*
-#include <string.h>
-int	main(void)
-{
-    printf("ft_method: %d, original method: %d\n",
-        !ft_strdup(""),
-        !strdup(""));
-    return (0);
-}
-*/

@@ -6,11 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 09:37:57 by bammar            #+#    #+#             */
-/*   Updated: 2022/07/30 09:37:58 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:29:56 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -38,24 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
-
-/* TEST
-#include <fcntl.h>
-#include <stdio.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-
-int	main(void)
-{
-	int	file;
-	int	cl;
-
-    file = open("test.txt", O_WRONLY | O_CREAT, S_IRWXU | S_IRWXO | S_IRWXG);
-    printf("%d\n", file);
-    ft_putnbr_fd(-2147483648, file);
-    write(file, "\n", 1);
-    cl = close(file);
-    printf("%d\n", cl); // 0 for succes
-    return (0);
-}
-*/

@@ -6,32 +6,11 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 13:16:50 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/05 17:20:55 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:38:02 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-static void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	unsigned char		*d;
-	const unsigned char	*s;
-	size_t				i;
-
-	if (dst == NULL || src == NULL)
-		return (NULL);
-	d = dst;
-	s = src;
-	i = 0;
-	while (i < n)
-	{
-		if (&d[i] != &s[i])
-			d[i] = s[i];
-		i++;
-	}
-	return (dst);
-}
+#include "libft.h"
 
 static char	*min_itoa(void)
 {
@@ -117,12 +96,3 @@ char	*ft_itoa(int n)
 	str = reverse(str);
 	return (str);
 }
-/*
-#include <string.h>
-int main(void)
-{
-	char *x = ft_itoa(15);
-	printf("%s\n", x);
-	return (0);
-}
-*/

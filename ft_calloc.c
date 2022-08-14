@@ -6,19 +6,18 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 22:17:58 by bammar            #+#    #+#             */
-/*   Updated: 2022/08/10 21:32:38 by bammar           ###   ########.fr       */
+/*   Updated: 2022/08/14 16:45:19 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*ptr;
 	size_t			i;
 
-	if (size > size * count)
+	if (count && size > size * count)
 		return (NULL);
 	ptr = malloc(size * count);
 	if (!ptr)
@@ -28,18 +27,3 @@ void	*ft_calloc(size_t count, size_t size)
 		ptr[i++] = '\0';
 	return ((void *)ptr);
 }
-// // /* TEST
-// int	main(void)
-// {
-//     char    *x;
-//     char *y;
-
-//     x = (char *)ft_calloc(8539, sizeof(int));
-// 	printf("%p\n", x);
-// 	free(x);
-//     y = (char *)calloc(8539, sizeof(int));
-// 	printf("%p\n", y);
-//     free(y);
-//     return (0);
-// }
-// // */
