@@ -6,14 +6,14 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 03:04:33 by bammar            #+#    #+#             */
-/*   Updated: 2023/03/27 02:53:40 by bammar           ###   ########.fr       */
+/*   Updated: 2023/03/27 03:22:58 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HT_H
 # define HT_H
 
-# include "../libft.h"
+# include "../protos.h"
 
 typedef struct s_node
 {
